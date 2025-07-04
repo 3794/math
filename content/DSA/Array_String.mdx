@@ -1,4 +1,38 @@
 ---
 title: Array / String
 ---
-array
+
+## Array
+
+Array는 기본 data structure입니다. elements의 collection을 순차적으로 저장합니다. 순차적으로 저장되어 있지만, array의 `index`를 통해 **random access**를 할 수 있습니다.
+
+| A     | 5   | 2   | 4   | 2   | 1   | 5   |
+| ----- | --- | --- | --- | --- | --- | --- |
+| index | 0   | 1   | 2   | 3   | 4   | 5   |
+
+```typescript
+const arr = [5, 2, 4, 2, 1, 5];
+
+console.log(arr[0]); // 5
+console.log(arr[1]); // 2
+console.log(arr[2]); // 4
+console.log(arr[3]); // 2
+console.log(arr[4]); // 1
+console.log(arr[5]); // 5
+```
+
+- [Leetcode 724. Find Pivot Index](https://leetcode.com/problems/find-pivot-index/)
+- [Leetcode 747. Largest Number At Least Twice of Others](https://leetcode.com/problems/largest-number-at-least-twice-of-others/)
+
+## String
+
+String은 실제로는 unicode character들의 array입니다. 그래서 array에 사용한 대부분의 것들을 string에 적용할 수 있습니다.
+character array와 string의 차이는, string은 특수 문자 `\0`로 끝나고 대부분의 프로그래밍 랭귀지에서 **immutable**입니다.
+
+| Str     | A      | p      | p      | l      | e      | \0     |
+| ------- | ------ | ------ | ------ | ------ | ------ | ------ |
+| Address | 0x1234 | 0x1235 | 0x1236 | 0x1237 | 0x1238 | 0x1239 |
+
+- [Leetcode 67. Add Binary](https://leetcode.com/problems/add-binary/)
+- [Leetcode 415. Add Strings](https://leetcode.com/problems/add-strings/)
+- [Leetcode 28. Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/)

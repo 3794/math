@@ -3,48 +3,52 @@ title: Two sum
 ---
 
 # Two sum
-서로 다른 $n$개의 정수 배열 ```nums``` 중에서 서로 다른 2개의 수를 sum해서 ```target```이 되는 조합을 구하라.
+
+서로 다른 $n$개의 정수 배열 `nums` 중에서 서로 다른 2개의 수를 sum해서 `target`이 되는 조합을 구하라.
 
 ## Brute force
-이중 loop 를 통해 모든 경우를 탐색한다. 시간 복잡도는 $O(n^2)$이 된다.
+
+이중 loop 를 통해 모든 경우를 탐색합니다. 시간 복잡도는 $O(n^2)$입니다.
 
 ```typescript
 function solve(nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length; j++) {
-            if (nums[i] + nums[j] === target) {
-                return [i, j]
-            }
-        }
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [i, j];
+      }
     }
+  }
 }
 ```
 
 ## Binary search
-nums가 정렬되어 있다면 binary search를 사용할 수 있다. binary search를 사용하면 $O(n * logn)$이 된다.
+
+nums가 정렬되어 있다면 [binary search](/DSA/Binary_Search)를 사용할 수 있습니다. binary search를 사용하면 $O(n * logn)$입니다.
 
 ```typescript
 function solve(nums, target) {
-    for (let i = 0; i < nums.length; i++) {
-        const found = binary_search(nums, target - nums[i]);
-        if (found) {
-            return [i,found]
-        }
+  for (let i = 0; i < nums.length; i++) {
+    const found = binary_search(nums, target - nums[i]);
+    if (found) {
+      return [i, found];
     }
+  }
 }
 ```
 
 ## Two pointers
-nums가 정렬되어 있다면 two pointers를 사용할 수 있다. 시간 복잡도는 $O(n)$이 된다.
+
+nums가 정렬되어 있다면 [two pointers](/DSA/Two_Pointers)를 사용할 수 있습니다. 시간 복잡도는 $O(n)$입니다.
 
 ```typescript
 function solve(nums, target) {
   let left = 0;
   let right = nums.length - 1;
-  
+
   while (left < right) {
     const sum = nums[left] + nums[right];
-    
+
     if (sum === target) {
       return [left, right];
     } else if (sum < target) {
@@ -55,21 +59,23 @@ function solve(nums, target) {
   }
 }
 ```
+
 ## Hash Table
-hash table을 사용하면 시간복잡도는 $O(n)$이 된다.
+
+[hash table](/DSA/Hash_Table)을 사용하면 시간복잡도는 $O(n)$입니다.
+
 ```typescript
 function solve(nums, target) {
   const map = new Map();
-  
+
   for (let i = 0; i < nums.length; i++) {
     const complement = target - nums[i];
-    
+
     if (map.has(complement)) {
       return [map.get(complement), i];
     }
-    
+
     map.set(nums[i], i);
   }
 }
-
 ```
