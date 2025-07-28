@@ -1,0 +1,54 @@
+---
+title: Function
+---
+
+# Function(함수)
+
+input을 입력하면 오직 하나의 output이 결정되어야 한다.
+
+$$
+f(x) = x^2
+$$
+
+다음은 2개의 output($3, -3$)이 있기 때문에 함수가 아니다.
+
+$$
+
+\begin{align}
+x^2 + y^2 &= 4 \\
+\text{ x 에 1을 대입하면 } \\
+1 + y^2 &= 4 \\
+y^2 &= 3 \\
+y &= \pm \sqrt{3} \\
+\end{align}
+$$
+
+### Composite Function(합성 함수)
+
+$$
+\begin{align}
+f(x) &= x^2 \\
+g(x) &= x + 1 \\
+(f \circ g)(x) &= f(g(x)) = f(x + 1) = (x + 1)^2 \\
+(g \circ f)(x) &= g(f(x)) = g(x^2) = x^2 + 1 \\
+\end{align}
+$$
+
+다른 예제:
+
+$$
+\begin{align}
+f(x) &= 9x^2 \\
+g(x) &= \frac{\sqrt{12 - x}}{3} \\
+(f \circ g)(-4) &= 9\times(\frac{\sqrt{12 - (-4)}}{3})^2 = 16 \\
+\end{align}
+$$
+
+### Inverse Function(역함수)
+
+$$
+\begin{align}
+f(x) &= x^2 \\
+f^{-1}(x) &= \sqrt{x} \\
+\end{align}
+$$

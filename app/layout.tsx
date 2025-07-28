@@ -13,10 +13,10 @@ export const metadata = {
 const navbar = (
   <Navbar
     logo={
-      <div>Data Structures and Algorithms</div>
+      <div>Mathmatics</div>
       //   <img src="/images/general/logo.svg" alt="Logo" width={100} height={20} />
     }
-  // ... Your additional navbar options
+    // ... Your additional navbar options
   />
 );
 const footer = <Footer>© H</Footer>;
@@ -43,7 +43,7 @@ export default async function RootLayout({ children }) {
           pageMap={await getPageMap()}
           // docsRepositoryBase="https://github.com/3794/principles/tree/main"
           footer={footer}
-        // ... Your additional layout options
+          // ... Your additional layout options
         >
           {children}
         </Layout>

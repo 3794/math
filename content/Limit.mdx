@@ -1,0 +1,39 @@
+---
+title: Limit
+---
+
+## Limit, 극한
+
+Limit은 수학에서 어떤 함수의 값이 특정 값에 가까워지는 것을 말한다.
+
+#### Limit 개념의 역사
+
+[아르키메데스](/Archimedes)는 원의 둘레를 구하기 위해 원에 내접하는 정다각형과 외접하는 정다각형의 둘레를 이용하여 원주율의 Limit값을 구했다.
+그는 정삼각형부터 시작하여 다각형의 변의 개수를 두 배씩 늘려가면서, 내접 및 외접 다각형의 둘레가 원의 둘레에 점차 가까워지는 것을 이용했다.
+이를 통해 원주율의 근사값을 계산하고, 현대의 Limit 개념을 활용한 방법론을 제시했다.
+
+#### 함수의 Limit
+
+함수 $f(x)$의 Limit은 $x$가 어떤 값 $a$에 가까워질 때 $f(x)$가 가까워지는 값을 의미한다.
+
+기호로는
+
+$\lim_{x \to a} f(x) = L$
+
+예시:
+
+$f(x) = 2x$에서 $x \to 3$ 일 때,
+
+$\lim_{x \to 3} 2x = 6$
+
+$f(x) = x^2$ 그래프:
+
+$$
+\begin{tikzpicture}
+\draw[->] (-1,0) -- (5,0) node[right] {$x$};
+\draw[->] (0,-1) -- (0,3) node[above] {$y$};
+\draw[domain=0:4, smooth, variable=\x, blue, thick] plot ({\x}, {sqrt(\x)});
+\node at (3,2) {$y = \sqrt{x}$};
+\draw[dashed] (0,0) -- (4,2);
+\end{tikzpicture}
+$$
