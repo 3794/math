@@ -4,6 +4,7 @@ import { getPageMap } from "nextra/page-map";
 import "nextra-theme-docs/style.css";
 import "katex/dist/katex.min.css";
 import { Analytics } from "@vercel/analytics/next";
+import ThemeWrapper from "./components/ThemeWrapper";
 
 export const metadata = {
   // Define your metadata here
@@ -45,7 +46,7 @@ export default async function RootLayout({ children }) {
           footer={footer}
           // ... Your additional layout options
         >
-          {children}
+          <ThemeWrapper>{children}</ThemeWrapper>
         </Layout>
         <Analytics />
       </body>

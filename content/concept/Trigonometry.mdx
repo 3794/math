@@ -1,0 +1,498 @@
+---
+title: Trigonometry
+---
+
+import TriangleDrawer from "../../app/components/TriangleDrawer";
+
+# Trigonometry (삼각법)
+
+삼각형의 각도와 변의 길이 사이의 관계를 다루는 수학의 한 분야
+
+<TriangleDrawer sideA={150} sideB={200} angleC={90} height={300} />
+
+## 직각삼각형의 기본 개념
+
+### hypotenuse, 빗변
+
+직각삼각형의 빗변은 항상 직각을 마주보는 변이다. 직각삼각형에서 제일 긴 변이다.
+
+$$
+{\overline{AB}\text{는 hypotenuse이다.}}
+$$
+
+### opposite side, 대변
+
+대변은 주어진 각의 건너편에 있다.
+
+$$
+{\overline{BC} \text{는 }\angle A\text{의 opposite side이다.}}
+$$
+
+### adjacent side, 인접변
+
+인접변은 빗변이 아닌, 주어진 각과 이웃한 변이다.
+
+$$
+{\overline{AC} \text{는 }\angle A\text{의 adjacent side이다.}}
+$$
+
+## Trigonometric Ratios (삼각비)
+
+직각삼각형에서 각도와 변의 길이 비율
+
+### sine (sin, 사인)
+
+주어진 각의 대변과 빗변의 비율
+
+$$
+\sin \theta = \frac{\text{opposite}}{\text{hypotenuse}} = \frac{\text{대변}}{\text{빗변}}
+$$
+
+예: $\sin A = \frac{a}{c}$
+
+### cosine (cos, 코사인)
+
+주어진 각의 인접변과 빗변의 비율
+
+$$
+\cos \theta = \frac{\text{adjacent}}{\text{hypotenuse}} = \frac{\text{인접변}}{\text{빗변}}
+$$
+
+예: $\cos A = \frac{b}{c}$
+
+### tangent (tan, 탄젠트)
+
+주어진 각의 대변과 인접변의 비율
+
+$$
+\tan \theta = \frac{\text{opposite}}{\text{adjacent}} = \frac{\text{대변}}{\text{인접변}} = \frac{\sin \theta}{\cos \theta}
+$$
+
+예: $\tan A = \frac{a}{b}$
+
+## Reciprocal Trigonometric Ratios (삼각비의 역수)
+
+### cosecant (csc, 코시컨트)
+
+사인의 역수 (reciprocal)
+
+$$
+\csc \theta = \frac{1}{\sin \theta} = \frac{\text{hypotenuse}}{\text{opposite}} = \frac{\text{빗변}}{\text{대변}}
+$$
+
+예: $\csc A = \frac{c}{a}$
+
+### secant (sec, 시컨트)
+
+코사인의 역수 (reciprocal)
+
+$$
+\sec \theta = \frac{1}{\cos \theta} = \frac{\text{hypotenuse}}{\text{adjacent}} = \frac{\text{빗변}}{\text{인접변}}
+$$
+
+예: $\sec A = \frac{c}{b}$
+
+### cotangent (cot, 코탄젠트)
+
+탄젠트의 역수 (reciprocal)
+
+$$
+\cot \theta = \frac{1}{\tan \theta} = \frac{\text{adjacent}}{\text{opposite}} = \frac{\text{인접변}}{\text{대변}} = \frac{\cos \theta}{\sin \theta}
+$$
+
+예: $\cot A = \frac{b}{a}$
+
+### 주요 관계식
+
+**역수 관계 (Reciprocal Identities):**
+
+$$
+\csc \theta = \frac{1}{\sin \theta}, \quad \sec \theta = \frac{1}{\cos \theta}, \quad \cot \theta = \frac{1}{\tan \theta}
+$$
+
+$$
+\sin \theta = \frac{1}{\csc \theta}, \quad \cos \theta = \frac{1}{\sec \theta}, \quad \tan \theta = \frac{1}{\cot \theta}
+$$
+
+**몫 관계 (Quotient Identities):**
+
+$$
+\tan \theta = \frac{\sin \theta}{\cos \theta}, \quad \cot \theta = \frac{\cos \theta}{\sin \theta}
+$$
+
+**피타고라스 항등식 (Pythagorean Identities):**
+
+$$
+\sin^2 \theta + \cos^2 \theta = 1
+$$
+
+$$
+1 + \tan^2 \theta = \sec^2 \theta
+$$
+
+$$
+1 + \cot^2 \theta = \csc^2 \theta
+$$
+
+**특수각의 삼각함수 값:**
+
+| 각도 ($\theta$) | $\sin \theta$        | $\cos \theta$        | $\tan \theta$        |
+| --------------- | -------------------- | -------------------- | -------------------- |
+| $0°$            | $0$                  | $1$                  | $0$                  |
+| $30°$           | $\frac{1}{2}$        | $\frac{\sqrt{3}}{2}$ | $\frac{1}{\sqrt{3}}$ |
+| $45°$           | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{2}}{2}$ | $1$                  |
+| $60°$           | $\frac{\sqrt{3}}{2}$ | $\frac{1}{2}$        | $\sqrt{3}$           |
+| $90°$           | $1$                  | $0$                  | undefined            |
+
+## 삼각함수 (Trigonometric Functions)
+
+삼각비를 일반화하여 모든 각도(음수, 0보다 큰 각, 360도 이상)에 대해 정의된 함수. 단위원(unit circle)을 이용하여 정의하며, 주기성을 가진다.
+
+**삼각비와 삼각함수의 차이:**
+
+- **삼각비**: 직각삼각형의 변의 비율 (0° < θ < 90° 범위)
+- **삼각함수**: 모든 각도에 대해 정의된 주기함수 (모든 실수 θ)
+
+**주요 성질:**
+
+- 주기성: $\sin(\theta + 360°) = \sin \theta$, $\cos(\theta + 360°) = \cos \theta$
+- 대칭성: $\sin(-\theta) = -\sin \theta$ (기함수), $\cos(-\theta) = \cos \theta$ (우함수)
+
+## 역삼각함수 (Inverse Trigonometric Functions)
+
+삼각비의 역함수로, 비율이 주어졌을 때 각도를 구하는 함수들
+
+### arcsine (arcsin, 아크사인)
+
+사인의 역함수. $\sin^{-1}$ 또는 $\arcsin$으로 표기
+
+$$
+\theta = \arcsin(x) \quad \text{if and only if} \quad \sin(\theta) = x
+$$
+
+**정의역:** $-1 \leq x \leq 1$
+
+**치역:** $-90° \leq \theta \leq 90°$ (또는 $-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$)
+
+예: $\arcsin\left(\frac{1}{2}\right) = 30°$
+
+### arccosine (arccos, 아크코사인)
+
+코사인의 역함수. $\cos^{-1}$ 또는 $\arccos$로 표기
+
+$$
+\theta = \arccos(x) \quad \text{if and only if} \quad \cos(\theta) = x
+$$
+
+**정의역:** $-1 \leq x \leq 1$
+
+**치역:** $0° \leq \theta \leq 180°$ (또는 $0 \leq \theta \leq \pi$)
+
+예: $\arccos\left(\frac{\sqrt{3}}{2}\right) = 30°$
+
+### arctangent (arctan, 아크탄젠트)
+
+탄젠트의 역함수. $\tan^{-1}$ 또는 $\arctan$으로 표기
+
+$$
+\theta = \arctan(x) \quad \text{if and only if} \quad \tan(\theta) = x
+$$
+
+**정의역:** 모든 실수 ($-\infty < x < \infty$)
+
+**치역:** $-90° < \theta < 90°$ (또는 $-\frac{\pi}{2} < \theta < \frac{\pi}{2}$)
+
+예: $\arctan(1) = 45°$
+
+### 역삼각함수의 활용
+
+직각삼각형에서 변의 길이를 알 때 각도를 구하는 데 사용:
+
+$$
+\text{각 } \theta = \arcsin\left(\frac{\text{대변}}{\text{빗변}}\right)
+$$
+
+$$
+\text{각 } \theta = \arccos\left(\frac{\text{인접변}}{\text{빗변}}\right)
+$$
+
+$$
+\text{각 } \theta = \arctan\left(\frac{\text{대변}}{\text{인접변}}\right)
+$$
+
+**주요 항등식:**
+
+$$
+\arcsin(x) + \arccos(x) = 90° = \frac{\pi}{2}
+$$
+
+$$
+\arctan(x) + \arctan\left(\frac{1}{x}\right) = 90° = \frac{\pi}{2} \quad (x > 0)
+$$
+
+## 기본 개념2
+
+### acute angle (예각)
+
+$0°$보다 크고 $90°$보다 작은 각
+
+$$
+0° < \theta < 90°
+$$
+
+직각삼각형에서 직각이 아닌 두 각은 모두 예각이다.
+
+### complementary angles (여각)
+
+두 각의 합이 $90°$ (직각)가 되는 각도의 쌍
+
+$$
+\alpha + \beta = 90°
+$$
+
+예: $30°$와 $60°$는 여각이다 ($30° + 60° = 90°$)
+
+직각삼각형에서 두 예각은 항상 서로 여각 관계이다.
+
+**여각의 삼각함수 관계:**
+
+$$
+\sin \theta = \cos(90° - \theta)
+$$
+
+$$
+\cos \theta = \sin(90° - \theta)
+$$
+
+$$
+\tan \theta = \cot(90° - \theta)
+$$
+
+### supplementary angles (보각)
+
+두 각의 합이 $180°$ (평각)가 되는 각도의 쌍
+
+$$
+\alpha + \beta = 180°
+$$
+
+예: $60°$와 $120°$는 보각이다 ($60° + 120° = 180°$)
+
+삼각형의 내각의 합은 $180°$이므로, 삼각형의 한 각을 알면 나머지 두 각의 합은 그 각의 보각이 된다.
+
+**보각의 삼각함수 관계:**
+
+$$
+\sin \theta = \sin(180° - \theta)
+$$
+
+$$
+\cos \theta = -\cos(180° - \theta)
+$$
+
+$$
+\tan \theta = -\tan(180° - \theta)
+$$
+
+### congruent triangles (합동 삼각형)
+
+모양과 크기가 완전히 같은 삼각형들. 대응하는 변의 길이와 각도가 모두 같다.
+
+**합동 조건 (Congruence Conditions):**
+
+1. **SSS (Side-Side-Side)**: 세 변의 길이가 모두 같을 때
+
+   $$
+   \overline{AB} = \overline{DE}, \quad \overline{BC} = \overline{EF}, \quad \overline{CA} = \overline{FD}
+   $$
+
+2. **SAS (Side-Angle-Side)**: 두 변의 길이와 그 사잇각이 같을 때
+
+   $$
+   \overline{AB} = \overline{DE}, \quad \angle A = \angle D, \quad \overline{AC} = \overline{DF}
+   $$
+
+3. **ASA (Angle-Side-Angle)**: 두 각과 그 사이의 변이 같을 때
+
+   $$
+   \angle A = \angle D, \quad \overline{AB} = \overline{DE}, \quad \angle B = \angle E
+   $$
+
+4. **AAS (Angle-Angle-Side)**: 두 각과 대응하는 한 변이 같을 때
+
+   $$
+   \angle A = \angle D, \quad \angle B = \angle E, \quad \overline{BC} = \overline{EF}
+   $$
+
+5. **HL (Hypotenuse-Leg)**: 직각삼각형에서 빗변과 한 변이 같을 때
+   $$
+   \text{빗변} = \text{빗변}, \quad \text{한 변} = \text{한 변}
+   $$
+
+## Law of Sines (사인법칙)
+
+임의의 삼각형에서 각 변의 길이와 그 대각의 사인 값 사이의 관계를 나타내는 법칙
+
+### 공식
+
+삼각형 ABC에서 변 $a$, $b$, $c$와 그 대각 $\angle A$, $\angle B$, $\angle C$에 대해:
+
+$$
+\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}
+$$
+
+또는 역수 형태로:
+
+$$
+\frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c}
+$$
+
+여기서:
+- $a$는 $\angle A$의 대변 (opposite side)
+- $b$는 $\angle B$의 대변
+- $c$는 $\angle C$의 대변
+
+### 활용
+
+사인법칙은 다음과 같은 경우에 삼각형의 나머지 요소를 구할 때 사용:
+
+1. **ASA (Angle-Side-Angle)**: 두 각과 한 변을 알 때
+   - 예: $\angle A = 30°$, $\angle B = 45°$, $a = 10$일 때, $b$를 구하려면:
+   $$
+   \frac{10}{\sin 30°} = \frac{b}{\sin 45°} \Rightarrow b = \frac{10 \cdot \sin 45°}{\sin 30°}
+   $$
+
+2. **AAS (Angle-Angle-Side)**: 두 각과 대변이 아닌 한 변을 알 때
+
+3. **SSA (Side-Side-Angle)**: 두 변과 한 각을 알 때 (ambiguous case - 모호한 경우)
+   - 주의: SSA의 경우 해가 0개, 1개, 또는 2개일 수 있음
+
+### 외접원과의 관계
+
+삼각형의 외접원의 반지름을 $R$이라 하면:
+
+$$
+\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R
+$$
+
+이 관계식은 사인법칙을 외접원과 연결하여 기하학적 의미를 제공한다.
+
+### 예제
+
+삼각형 ABC에서 $\angle A = 40°$, $\angle B = 60°$, $a = 8$일 때, $b$를 구하시오.
+
+**풀이:**
+
+$$
+\frac{a}{\sin A} = \frac{b}{\sin B}
+$$
+
+$$
+\frac{8}{\sin 40°} = \frac{b}{\sin 60°}
+$$
+
+$$
+b = \frac{8 \cdot \sin 60°}{\sin 40°} = \frac{8 \cdot 0.866}{0.643} \approx 10.78
+$$
+
+## Law of Cosines (코사인법칙)
+
+임의의 삼각형에서 변의 길이와 각도 사이의 관계를 나타내는 법칙. 피타고라스 정리의 일반화된 형태이다.
+
+### 공식
+
+삼각형 ABC에서 변 $a$, $b$, $c$와 각 $\angle A$, $\angle B$, $\angle C$에 대해:
+
+$$
+a^2 = b^2 + c^2 - 2bc \cos A
+$$
+
+$$
+b^2 = a^2 + c^2 - 2ac \cos B
+$$
+
+$$
+c^2 = a^2 + b^2 - 2ab \cos C
+$$
+
+여기서:
+- $a$는 $\angle A$의 대변
+- $b$는 $\angle B$의 대변
+- $c$는 $\angle C$의 대변
+
+### 각도를 구하는 형태
+
+변의 길이를 알 때 각도를 구하는 형태로 변형하면:
+
+$$
+\cos A = \frac{b^2 + c^2 - a^2}{2bc}
+$$
+
+$$
+\cos B = \frac{a^2 + c^2 - b^2}{2ac}
+$$
+
+$$
+\cos C = \frac{a^2 + b^2 - c^2}{2ab}
+$$
+
+### 피타고라스 정리와의 관계
+
+직각삼각형에서 $\angle C = 90°$이면 $\cos C = 0$이므로:
+
+$$
+c^2 = a^2 + b^2 - 2ab \cos 90° = a^2 + b^2 - 2ab \cdot 0 = a^2 + b^2
+$$
+
+이는 피타고라스 정리와 동일하므로, 코사인법칙은 피타고라스 정리의 일반화이다.
+
+### 활용
+
+코사인법칙은 다음과 같은 경우에 삼각형의 나머지 요소를 구할 때 사용:
+
+1. **SAS (Side-Angle-Side)**: 두 변과 그 사잇각을 알 때
+   - 예: $b = 5$, $c = 7$, $\angle A = 60°$일 때, $a$를 구하려면:
+   $$
+   a^2 = 5^2 + 7^2 - 2(5)(7) \cos 60° = 25 + 49 - 70 \cdot 0.5 = 39
+   $$
+   $$
+   a = \sqrt{39} \approx 6.24
+   $$
+
+2. **SSS (Side-Side-Side)**: 세 변의 길이를 알 때
+   - 예: $a = 6$, $b = 8$, $c = 10$일 때, $\angle C$를 구하려면:
+   $$
+   \cos C = \frac{6^2 + 8^2 - 10^2}{2(6)(8)} = \frac{36 + 64 - 100}{96} = \frac{0}{96} = 0
+   $$
+   $$
+   \angle C = \arccos(0) = 90°
+   $$
+
+### 사인법칙과 코사인법칙의 비교
+
+| 법칙       | 사용 조건                              | 구할 수 있는 것 |
+| ---------- | -------------------------------------- | --------------- |
+| 사인법칙   | ASA, AAS, SSA (두 각 또는 각과 대변)   | 변 또는 각      |
+| 코사인법칙 | SAS, SSS (두 변과 사잇각 또는 세 변)   | 변 또는 각      |
+
+### 예제
+
+삼각형 ABC에서 $a = 7$, $b = 10$, $\angle C = 50°$일 때, $c$를 구하시오.
+
+**풀이:**
+
+$$
+c^2 = a^2 + b^2 - 2ab \cos C
+$$
+
+$$
+c^2 = 7^2 + 10^2 - 2(7)(10) \cos 50°
+$$
+
+$$
+c^2 = 49 + 100 - 140 \cdot 0.643 = 149 - 90.02 = 58.98
+$$
+
+$$
+c = \sqrt{58.98} \approx 7.68
+$$
