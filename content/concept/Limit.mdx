@@ -25,15 +25,3 @@ $\lim_{x \to a} f(x) = L$
 $f(x) = 2x$에서 $x \to 3$ 일 때,
 
 $\lim_{x \to 3} 2x = 6$
-
-$f(x) = x^2$ 그래프:
-
-$$
-\begin{tikzpicture}
-\draw[->] (-1,0) -- (5,0) node[right] {$x$};
-\draw[->] (0,-1) -- (0,3) node[above] {$y$};
-\draw[domain=0:4, smooth, variable=\x, blue, thick] plot ({\x}, {sqrt(\x)});
-\node at (3,2) {$y = \sqrt{x}$};
-\draw[dashed] (0,0) -- (4,2);
-\end{tikzpicture}
-$$
